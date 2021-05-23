@@ -38,6 +38,8 @@
     <servlet-mapping>
         <servlet-name>ListFoodServlet</servlet-name>
         <url-pattern></url-pattern>
+<!--        <url-pattern>/*</url-pattern>-->
+<!--        <url-pattern>/*/*</url-pattern>-->
     </servlet-mapping>
     <!--detail-->
     <servlet>

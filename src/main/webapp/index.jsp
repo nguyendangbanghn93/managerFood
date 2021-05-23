@@ -163,7 +163,9 @@
     function popup() {
         var div = $(), id = "idModel", o = {
             title: ""
-        };
+        },
+            url = location.pathname,
+            titlePage = document.title;
         Array.from(arguments).map(function (a) {
             if ($.isDom(a)) {
                 div = a;
@@ -175,6 +177,8 @@
         });
         id = o.id || id;
         div = o.div || div;
+        document.title = o.title;
+        window.history.pushState(o.title, o.title, '/'+id);
         $("body").append(
             $('<div>', {id: id, class: 'modal', text: ''}).each(function () {
                 var t = $(this);
@@ -191,6 +195,9 @@
                             $('<h4>', {id: '', class: 'modal-title', text: o.title}),
                             $("<button>", {type: "button", class: "close", text: 'x'}).click(function () {
                                 $(this).closest("#" + id).remove();
+                                document.title = titlePage;
+                                window.history.pushState(titlePage, titlePage, url);
+
                             })
                         ),
                         $('<div>', {id: '', class: 'modal-body', text: ''}).append(
