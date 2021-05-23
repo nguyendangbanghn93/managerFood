@@ -220,7 +220,7 @@
                     if (v.length <= 7) {
                         t.closest(".form-group").find(".statusPrice").remove()
                         t.closest(".form-group").append(
-                            $("<div>", {class: "statusPrice", style: "color:red;", text: "Giá phải lớn hơn 0"})
+                            $("<div>", {class: "statusPrice", style: "color:red;", text: "Tên món ăn phải lớn hơn 7 ký tự"})
                         )
                         div.find("#btnSubmit").removeClass("btn-primary").addClass("btn-secondary").css("pointer-events", "none");
                     } else {
