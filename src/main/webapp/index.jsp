@@ -342,7 +342,7 @@
                                 div.find("#StatusServer").text(v);
                             } else {
                                 console.log(data)
-                                window.location.href = '?page=1';
+                                window.location.href = '/?page=1';
                             }
                         }
                     })
@@ -357,7 +357,7 @@
                             if (v != 1) {
                                 div.find("#StatusServer").text(v);
                             } else {
-                                window.location.href = '?page=1';
+                                window.location.href = '/?page=1';
                             }
                         }
                     })
